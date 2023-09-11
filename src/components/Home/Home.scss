@@ -1,0 +1,88 @@
+@import '../../styles/style';
+
+.home-container {
+   .search-wrapper {
+      @include padding;
+
+      label {
+         @include roboto-style(600, $text-secondary);
+         font-size: 1.5rem;
+      }
+   
+      .search-bar {
+         display: flex;
+         justify-content: space-between;
+         margin-top: .75rem;
+         
+         input[type=text] {
+            width: 80%;
+            border-radius: 8px;
+            border: 1px solid $bg-secondary;
+            background: $bg-secondary;
+            padding: 1rem;
+            font-size: 1rem;
+            @include roboto-style(400, $text-secondary);
+            margin-right: 0.5rem;
+            
+            &:focus {
+               outline: none;
+               border: 1px solid $text-secondary;
+            }
+            
+            &::placeholder {
+               @include roboto-style(400, $text-secondary);
+            }
+         } 
+         
+         a:active {
+            border: none;
+            background: $bg-secondary;
+            color: $text-secondary;
+         }
+         
+         button[type=button] {
+            width: 15%;
+            border-radius: 8px;
+            border: none;
+            background: $btn-main;
+            transition: .3s ease-in;
+            cursor: pointer;
+            
+            &:active {
+               background: $bg-secondary;
+               color: $text-secondary;
+            }
+            
+            .icon {
+               font-size: 1.5rem;
+               color: $text-secondary;
+            }
+
+            .loader-icon {
+               @include spin;
+            }
+         }
+      }
+   }
+
+   .card-container {
+      @include padding;
+
+      strong {   
+         @include roboto-style(400, $text-secondary);
+         font-size: 1rem;
+         width: 100%;
+      }
+
+      .card-wrapper {
+         margin-top: 2rem;
+         display: grid;
+         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+         grid-gap: 2rem;
+
+         @media only screen and (min-width: 40.063em) and (max-width: 120em) {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+         }
+      }
+   }
+}

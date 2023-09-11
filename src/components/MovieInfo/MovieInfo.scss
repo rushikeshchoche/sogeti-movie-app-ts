@@ -1,0 +1,54 @@
+@import '../../styles/style';
+
+.movie-info {
+  @include padding;
+  .main-info-wrapper {
+    @include roboto-style(600, $text-secondary);
+    strong {
+      font-size: 1.5rem;
+    }
+  }
+   
+  .extra-info-wrapper {
+    margin-top: .75rem;
+
+    @media only screen and (min-width: 40.063em) and (max-width: 120em) {
+      display: flex;
+    }
+
+    img {
+      border-radius: 12px;
+      margin: .5rem 0;
+      height: 100%;
+      width: 100%;
+
+      @media only screen and (min-width: 40.063em) and (max-width: 120em) {
+        width: initial;
+      }
+    }
+    
+    .extra-info {
+      @include roboto-style(400, rgba($text-secondary, .85));
+      margin: 1rem;
+
+      .genre {
+        display: flex;
+        .genre-item {
+          border: 1px solid $text-secondary;
+          border-radius: 12px;
+          padding: .5rem;
+          margin: .2rem;
+        }
+      }
+
+      .actors-info {
+        display: flex;
+        align-items: baseline;
+
+        .actor-details {
+          margin-left: .5rem;
+        }
+      }
+    }
+  }
+}

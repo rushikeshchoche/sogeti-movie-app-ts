@@ -1,0 +1,6 @@
+@import '../../styles/style';
+
+.not-found {
+  @include padding;
+  @include roboto-style(400, $text-secondary);
+}

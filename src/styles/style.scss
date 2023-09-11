@@ -1,0 +1,29 @@
+@import './colors';
+
+@mixin padding {
+   padding: .5rem;
+}
+
+@mixin roboto-style($weight: 400, $color: $text-primary) {
+   font-family: 'Roboto', Sans-Serif;
+   font-weight: $weight;
+   color: $color;
+}
+
+@mixin spin($time: 2s) {
+   -webkit-animation:spin $time linear infinite;
+   -moz-animation:spin $time linear infinite;
+   animation:spin $time linear infinite;
+   @-moz-keyframes spin { 
+     100% { -moz-transform: rotate(360deg); } 
+   }
+   @-webkit-keyframes spin { 
+     100% { -webkit-transform: rotate(360deg); } 
+   }
+   @keyframes spin {
+     100% { 
+       -webkit-transform: rotate(360deg); 
+       transform:rotate(360deg); 
+     }
+   }
+}

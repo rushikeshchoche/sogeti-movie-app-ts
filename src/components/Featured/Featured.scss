@@ -1,0 +1,35 @@
+@import '../../styles/style';
+
+.featured-container {
+  @include padding;
+
+  h3 {
+    @include roboto-style(600, $text-secondary);
+    @include padding;
+  }
+
+  .card-wrapper {
+    @include padding;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    .movie-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media only screen and (min-width: 40.063em) and (max-width: 120em) {
+        width: 24%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-right: 1rem;
+      }
+
+      .movie-details {
+        @include padding;
+        @include roboto-style(400, rgba($text-secondary, .85));
+      }
+    }
+  }
+}

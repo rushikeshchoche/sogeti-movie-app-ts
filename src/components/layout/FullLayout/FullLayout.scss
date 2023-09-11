@@ -1,0 +1,23 @@
+@import '../../../styles/style';
+
+.fullLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.headerContainer {
+  padding: 0 2rem;
+  background-color: $bg-black;
+}
+
+.contentContainer {
+  margin: 2em;
+  flex: 1;
+}
+
+.content {
+  background-color: $bg-white;
+  border-radius: 12px;
+  padding: 20px;
+}
