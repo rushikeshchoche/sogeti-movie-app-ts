@@ -20,7 +20,6 @@ export const OmdbProvider: React.FC<Props> = ({ children }) => {
     Promise.all(
       DEFAULT_MOVIE_IDS.map((id) => searchMovieById(id))
     ).then(([...movies]) => {
-      setError(undefined);
       setLoading(false);
       movies.forEach((movie) => {
         if (isServerError(movie)) {
